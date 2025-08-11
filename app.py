@@ -8,6 +8,3 @@ def index():
     if request.method == "POST":
         submitted_url = request.form.get("url")
     return render_template("index.html", submitted_url=submitted_url)
-
-if __name__ == "__main__":
-    app.run(debug=True)

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <title>News Article Summarizer</title>
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>News Article Summarizer</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div>
         <h1>Submit a URL</h1>
         <form method="post">
-            <input type="url" name="url" placeholder="Enter URL" required>
+            <input type="url" name="url" class="textbox" placeholder="Enter URL" required>
             <button type="submit">Submit</button>
         </form>
         {% if submitted_url %}
-            <p>You submitted: <a href="{{ submitted_url }}">{{ submitted_url }}</a></p>
+            <p>You submitted: <a href="{{ submitted_url }}" target="_blank">{{ submitted_url }}</a></p>
         {% endif %}
-    </body>
+    </div>
+</body>
 </html>
